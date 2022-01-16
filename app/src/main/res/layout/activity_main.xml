@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEB887"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/coffi" />
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Кофейня Arabica"
+        android:textSize="34sp"
+        android:textStyle="bold"
+
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewCoffeName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:text="Американо"
+            android:textSize="24sp"
+
+            />
+
+        <TextView
+            android:id="@+id/textViewCost1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:text="40c."
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/checkBoxAmericano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+
+            android:text="сливки" />
+
+        <Button
+            android:id="@+id/buttonAmericanoMinus"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="4dp"
+            android:onClick="americanoMinus"
+            android:text="-"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/textViewAmericanoCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginVertical="13dp"
+            android:layout_marginRight="4dp"
+            android:text="0"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonAmericanoPluss"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp"
+            android:onClick="americanoPlus"
+            android:text="+"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewCoffeName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:text="Латте"
+            android:textSize="24sp"
+
+            />
+
+        <TextView
+            android:id="@+id/textViewCost2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:text="50c."
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/checkBoxLate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+
+            android:text="сливки" />
+
+        <Button
+            android:id="@+id/buttonLatteMinus"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="4dp"
+            android:onClick="latteMinus"
+            android:text="-"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/textViewLatteCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginVertical="13dp"
+            android:layout_marginRight="4dp"
+            android:text="0"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonLattePluss"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp"
+            android:onClick="lattePlus"
+            android:text="+"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:text="Капучино"
+            android:textSize="24sp"
+
+            />
+
+        <TextView
+            android:id="@+id/textViewCost3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:text="45c."
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/checkBoxKapuchino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+
+            android:text="сливки" />
+
+        <Button
+            android:id="@+id/buttonKapuchinoMinus"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="4dp"
+            android:onClick="kapuchinoMinus"
+            android:text="-"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/textViewKapuchinoCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginVertical="13dp"
+            android:layout_marginRight="4dp"
+            android:text="0"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonKapuchinoPluss"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp"
+            android:onClick="kapuchinoPlus"
+            android:text="+"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="сумма"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewSumma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="0"
+            android:textColor="#FF0000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textViewValuta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dp"
+            android:text="сом"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewCommentari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="Комментарий:" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+
+            android:inputType="textPersonName"
+
+            android:textSize="14dp"
+
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSum"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+
+        android:onClick="buttonSumOnClic"
+        android:text="Заказать"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewSlivki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+        android:text="Сливки" />
+
+    <TextView
+        android:id="@+id/textViewTotalSumm"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_gravity="center"
+
+        android:text="Итого:" />
+
+    <TextView
+        android:id="@+id/textViewComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+
+        android:text="Koмментарий:" />
+
+    <TextView
+        android:id="@+id/textViewThanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/coffi" />
+
+
+</LinearLayout>
