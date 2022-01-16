@@ -43,9 +43,10 @@ public class MainActivity extends AppCompatActivity {
         chekBoxLatte = cbLatte.isChecked();
         if (chekBoxLatte) tempText = tempText + "\n Латте со сливками ";
         if (chekBoxKapuchino) tempText = tempText + "\n Капучино со сливками ";
-        if(chekBoxAmericano)  tempText = tempText + "\n Американо со сливками ";
+        if (chekBoxAmericano) tempText = tempText + "\n Американо со сливками ";
         TextView tvSlivki = findViewById(R.id.textViewSlivki);
         tvSlivki.setText(tempText);
+        if (!chekBoxLatte && !chekBoxKapuchino && !chekBoxAmericano) tvSlivki.setText("Без сливок");
 
     }
 
@@ -141,13 +142,13 @@ public class MainActivity extends AppCompatActivity {
         sum = kapuchinoQuantity * costKapuchino + americanoQuantity * costAmericano + latteQuantity * costLatte;
         tw.setText("" + sum);
     }
-    public void thanksMethod()
-    {
+
+    public void thanksMethod() {
         TextView tw = findViewById(R.id.textViewThanks);
         tw.setText("Cпасибо за заказ)!");
     }
-    public void  clearAllTextView()
-    {
+
+    public void clearAllTextView() {
         TextView tw = findViewById(R.id.textViewThanks);
         tw.setText("");
         TextView tvSlivki = findViewById(R.id.textViewSlivki);
@@ -155,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tvComment = findViewById(R.id.textViewComment);
         tvComment.setText("Комментарий:");
         TextView tv = findViewById(R.id.textViewTotalSumm);
-        tv.setText("Итого:" );
+        tv.setText("Итого:");
 
     }
 
